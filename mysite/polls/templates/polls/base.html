@@ -1,15 +1,32 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewpoint" content="width=device-width, initial-scale=1">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css' %}"/>
+<style>
+    body {
+    color:white;
+    }
+</style>
 </head>
 <body>
 <hr>
 <center><p><h4>WELCOME</h4></p></center>
 <hr>
-{% block main_content %}
-{% endblock %}
+{% include 'polls/header.html' %}
+<div class="jumbotorn">
+    <div class="container">
+
+        {% block main_content %}
+        {% endblock %}
+    </div>
+</div>
 {% include 'polls/footer.html' %}
 </body>
 </html>
