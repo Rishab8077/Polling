@@ -18,5 +18,6 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^polls/', include('polls.urls',namespace='polls')),
+    url(r'^',include('polls.urls',namespace='polls')),
+    url(r'^signup/',include('signup.urls')),
 ]

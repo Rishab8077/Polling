@@ -3,6 +3,8 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.urls import reverse
 from .models import Question
 # Create your views here.
+def home(request):
+    return render(request,"polls/home.html")
 def index(request):
     latest_questions = Question.objects.order_by('-pub_date')[:5]
     context = {'latest_questions': latest_questions}
