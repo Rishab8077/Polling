@@ -1,12 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+<title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"/>
+<style>
+    body{
+    color:white;
+    }
+</style>
 </head>
 <body>
-<h1>welcome</h1>
-<a href="signup/signup">Signup</a>
-
+<center>
+<h1>Welcome</h1>
+<button><a href="signup/signup">Signup</a></button>
+    <button><a href="login/login">Login</a></button>
+</center>
 </body>
 </html>

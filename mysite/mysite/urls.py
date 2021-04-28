@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^',include('polls.urls',namespace='polls')),
     url(r'^signup/',include('signup.urls')),
+    url(r'^login/',include('login.urls')),
 ]
